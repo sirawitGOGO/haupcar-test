@@ -13,6 +13,17 @@ const carController = {
             res.status(500);
         }
     },
+    findById: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { carId } = req.body as {
+                carId: number
+            };
+            const cars = await carService.findById(carId);
+            res.status(200).json(cars);
+        } catch (error) {
+            next(error)
+        }
+    },
     findCar: async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { page, limit } = req.body as {

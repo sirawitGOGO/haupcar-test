@@ -20,6 +20,15 @@ const carService = {
         } as CarAttributes);
         return newCar.dataValues;
     },
+    findById: async (
+        carId: number
+    ): Promise<CarAttributes> => {
+        const car = await database.carModel.findByPk(carId);
+        if (!car) {
+            throw new Error("car not found");
+        }
+        return car.dataValues;
+    },
     findCars: async (
         page: number,
         limit: number
