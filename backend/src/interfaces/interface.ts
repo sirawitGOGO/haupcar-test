@@ -3,7 +3,7 @@ export interface CarAttributes {
     vehicleRegistration: string;
     brand: string;
     model: string;
-    note: string;
+    note: string | null;
     createdAt: Date;
     updatedAt: Date;
     deletedAt: Date;
