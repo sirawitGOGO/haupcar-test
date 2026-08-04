@@ -2,7 +2,7 @@ import { CarAttributes } from "../../interfaces/interface";
 
 export interface CarCreateAndUpdateAtrributes {
     carId?: CarAttributes['carId'];
-    vehicleRegistration: CarAttributes['vehicleRegistration'];
+    registrationNumber: CarAttributes['registrationNumber'];
     brand: CarAttributes['brand'];
     model: CarAttributes['model'];
     note: CarAttributes['note'];

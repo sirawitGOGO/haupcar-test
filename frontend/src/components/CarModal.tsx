@@ -19,7 +19,7 @@ const CarModal = ({
     const [form] = Form.useForm<CarCreateAndUpdateRequest>();
     form.setFieldsValue({
         carId: data?.carId,
-        vehicleRegistration: data?.vehicleRegistration,
+        registrationNumber: data?.registrationNumber,
         brand: data?.brand,
         model: data?.model,
         note: data?.note
@@ -94,8 +94,8 @@ const CarModal = ({
                         </Form.Item>
                     )}
                     <Form.Item
-                        name="vehicleRegistration"
-                        label="Vehicle Registration"
+                        name="registrationNumber"
+                        label="Registration Number"
                         rules={[
                             { required: true },
                             { type: 'string' },

@@ -1,7 +1,6 @@
 import type React from "react";
 import { useDeleteCar, useFindCar } from "../hooks/useCar";
 import { useState } from "react";
-import IsLoading from "../components/IsLoading";
 import { Button, Pagination, Space, Table, type TableProps } from "antd";
 import CarModal from "../components/CarModal";
 import type { CarCreateAndUpdateRequest, CarResponse } from "../interfaces/interface";
@@ -10,7 +9,7 @@ import dayjs from "dayjs";
 
 interface CarDataType {
   carId: CarResponse['carId'];
-  vehicleRegistration: CarResponse['vehicleRegistration'];
+  registrationNumber: CarResponse['registrationNumber'];
   brand: CarResponse['brand'];
   model: CarResponse['model'];
   note: CarResponse['note'];
@@ -56,7 +55,7 @@ const HomePage: React.FC = () => {
     setIsModalOpen(true);
     const payload: CarCreateAndUpdateRequest = {
       carId: data.carId,
-      vehicleRegistration: data.vehicleRegistration,
+      registrationNumber: data.registrationNumber,
       brand: data.brand,
       model: data.model,
       note: data.note
@@ -66,7 +65,7 @@ const HomePage: React.FC = () => {
 
   const columns: TableProps<CarDataType>['columns'] = [
     { title: 'Car ID', dataIndex: 'carId' },
-    { title: 'Vehicle Registration', dataIndex: 'vehicleRegistration' },
+    { title: 'Registration Number', dataIndex: 'registrationNumber' },
     { title: 'Brand', dataIndex: 'brand' },
     { title: 'Model', dataIndex: 'model' },
     { title: 'Note', dataIndex: 'note' },

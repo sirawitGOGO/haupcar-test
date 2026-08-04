@@ -1,6 +1,6 @@
 export interface CarAttributes {
     carId: number;
-    vehicleRegistration: string;
+    registrationNumber: string;
     brand: string;
     model: string;
     note: string | null;

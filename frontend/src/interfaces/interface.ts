@@ -1,6 +1,6 @@
 export interface CarCreateAndUpdateRequest {
     carId?: number;
-    vehicleRegistration: string;
+    registrationNumber: string;
     brand: string;
     model: string;
     note: string | null;
@@ -8,7 +8,7 @@ export interface CarCreateAndUpdateRequest {
 
 export interface CarResponse {
     carId: number;
-    vehicleRegistration: string;
+    registrationNumber: string;
     brand: string;
     model: string;
     note: string | null;

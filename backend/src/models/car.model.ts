@@ -12,7 +12,7 @@ export default function CarModel(sequelize: Sequelize) {
                 unique: true,
                 allowNull: false,
             },
-            vehicleRegistration: {
+            registrationNumber: {
                 type: DataTypes.STRING,
                 unique: true,
                 allowNull: false

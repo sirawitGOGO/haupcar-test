@@ -8,7 +8,7 @@ const carService = {
     ): Promise<CarAttributes> => {
         const existCar = await database.carModel.findOne({
             where: {
-                vehicleRegistration: payload.vehicleRegistration
+                registrationNumber: payload.registrationNumber
             }
         });
         if (existCar) {
