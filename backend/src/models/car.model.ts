@@ -36,7 +36,7 @@ export default function CarModel(sequelize: Sequelize) {
             },
             updatedAt: {
                 type: DataTypes.DATE,
-                allowNull: true
+                allowNull: false
             },
             deletedAt: {
                 type: DataTypes.DATE,
