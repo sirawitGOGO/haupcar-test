@@ -15,9 +15,7 @@ const carController = {
     },
     findById: async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { carId } = req.body as {
-                carId: number
-            };
+            const carId = Number(req.params.carId);
             const cars = await carService.findById(carId);
             res.status(200).json(cars);
         } catch (error) {
@@ -47,9 +45,7 @@ const carController = {
     },
     delete: async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { carId } = req.body as {
-                carId: number
-            };
+            const carId = Number(req.params.carId);
             await carService.delete(carId);
             res.status(204).send();
         } catch (error) {
