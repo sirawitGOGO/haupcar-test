@@ -7,7 +7,7 @@ export interface CarCreateAndUpdateRequest {
 }
 
 export interface CarResponse {
-    carId: string;
+    carId: number;
     vehicleRegistration: string;
     brand: string;
     model: string;

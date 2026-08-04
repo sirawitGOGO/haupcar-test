@@ -32,6 +32,6 @@ export const updateCarApi = async (payload: CarCreateAndUpdateRequest) => {
 }
 
 export const deleteCarApi = async (carId: number) => {
-    const response = await axios.get<void>(ENDPOINTS.car.delete(carId));
+    const response = await axios.delete<void>(ENDPOINTS.car.delete(carId));
     return response.data
 }
